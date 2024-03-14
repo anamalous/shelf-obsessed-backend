@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin: 40;padding: 0px 0px 0px 20px;">
+<h1>REPORTS</h1>
+  
+<h2>Total Users:  {{totalusers}}</h2>
+<h2>User Base split:</h2>
+<table border="2",style="padding: 10px;">
+  <tr><th>Age Group</th><th>Member Count</th></tr>
+  <tr><td>teens</td><td>{{teens}}</td></tr>
+  <tr><td>tweens</td><td>{{twenties}}</td></tr>
+  <tr><td>adult</td><td>{{rest}}</td></tr>
+</table>
+
+<h2>monthly report</h2>
+<h3>month: {{reps.repmonth}}  year: {{reps.repyear}}</h3>
+<h3>new accounts: {{reps.monthacc}}</h3>
+<h3>reads this month: {{reps.monthreads}}</h3>
+
+<h2>author hits</h2>
+<ul>
+{% for x in auth %}
+<li>{{x.name}}:{{x.reads}}</li>
+{% endfor %}
+
+</ul>
+</div>
+</body>
+</html>
